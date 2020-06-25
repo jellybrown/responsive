@@ -1,0 +1,37 @@
+.gallery {
+  width: 100%;
+}
+
+.gallery > li {
+  float: none;
+  padding: 0 0 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery > li img {
+  width: 100%;
+}
+
+.gallery > li:nth-child(2n) {
+  padding-right: 0px;
+}
+
+.gallery li ul {
+  border: 1px solid #ddd;
+  padding: 29px 8px 0;
+  height: 110px;
+}
+
+.gallery li ul li {
+  font-size: 12px;
+  color: #333;
+  background: url(images/bu_square.png) no-repeat 0 5px / 4px auto;
+  padding: 0 0 8px 10px;
+}
+
+.gallery li a span {
+  right: 13px;
+  bottom: 15px;
+  line-height: 28px;
+}

@@ -1,0 +1,43 @@
+.gallery {
+  width: 980px;
+}
+
+.gallery > li {
+  width: 470px;
+  padding: 0 40px 40px 0;
+  float: left;
+}
+
+.gallery > li:nth-child(2n) {
+  padding-right: 0;
+}
+
+.gallery li ul {
+  border: 1px solid #ddd;
+  padding: 30px 30px 20px;
+}
+.gallery li a {
+  position: relative;
+  display: block;
+}
+
+.gallery li ul li {
+  font-size: 15px;
+  color: #333;
+  background: url(images/bu_square.png) no-repeat 0 5px;
+  padding: 0 0 12px 15px;
+  line-height: 100%;
+}
+
+.gallery li a span {
+  position: absolute;
+  right: 29px;
+  bottom: 79px;
+  width: 81px;
+  height: 28px;
+  background: #00a0c6;
+  font-size: 13px;
+  color: #fff;
+  line-height: 28px;
+  text-align: center;
+}

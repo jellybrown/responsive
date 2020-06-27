@@ -1,0 +1,111 @@
+html {
+  font-size: 20px;
+  font-family: "Montserrat", "Noto Sans KR ", sans-serif;
+}
+body {
+  font-size: 1rem;
+}
+
+header {
+  background: #f6f5ef;
+  border-top: 2px solid #000;
+}
+
+header > div {
+  width: 55rem;
+  margin: 0 auto;
+  position: relative;
+}
+header > div:after {
+  /*float로 인해 영역 사라져서 추가 */
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header > div h1 {
+  float: left;
+  padding: 1.1rem 0 1.2rem;
+}
+
+header > div nav {
+  float: right;
+  padding: 3.4rem 0 0 0;
+}
+header > div nav > ul > li {
+  float: left;
+}
+header > div nav > ul > li:first-child {
+  display: none;
+}
+
+header > div nav > ul > li > a {
+  display: block;
+  font-size: 0.7rem;
+  padding: 0.75rem 1.25rem 0;
+  height: 2.6rem;
+  color: #333;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+header > div .spot {
+  position: absolute;
+  top: 1rem;
+  right: 2.25rem;
+  font-family: Noto Sans KR;
+}
+
+header > div .spot li {
+  float: left;
+  position: relative;
+}
+
+header > div .spot li a {
+  font-size: 0.65rem;
+  padding: 0.75rem;
+  color: #333;
+  line-height: 100%;
+}
+
+header > div .spot li ~ li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-20%);
+  width: 1px;
+  height: 0.6rem;
+  background: #e5e5e5;
+}
+
+header > div .spot li:last-child a:after {
+  display: none;
+}
+header > div .spot li:last-child a {
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 0;
+  color: transparent;
+  border-radius: 0.25px;
+}
+
+header > div .spot li:last-child a:before {
+  content: "\e97a";
+  font-family: "xeicon";
+  font-size: 1.2rem;
+  color: #000;
+}
+
+header > div .spot i {
+  display: none;
+}
+
+header .total {
+  display: none;
+}

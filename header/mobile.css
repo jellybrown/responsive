@@ -2,13 +2,19 @@ header h1 {
   float: none;
   position: absolute;
   left: 50%;
-  top: 35px;
-  transform: translateX(-50%);
+  top: 15px;
+  transform: translateX(-50%) scale(0.85);
   padding: 0;
 }
 
+header h1 a {
+  background: url(images/layout_m.png) no-repeat 0 -70px;
+  width: 95px;
+  height: 38px;
+}
+
 header .left {
-  padding: 49px 0 0 38px;
+  padding: 25px 0 0 14px;
 }
 
 header .all {
@@ -19,6 +25,7 @@ header .all {
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
   color: transparent;
+  transform: scale(0.5);
 }
 header .all:before {
   content: "";
@@ -36,7 +43,24 @@ header .left > div {
 }
 
 header > ul {
-  padding: 40px 40px 0 0;
+  padding: 20px 17px 0 0;
+}
+
+header > ul li {
+  display: none;
+}
+
+header > ul li.join {
+  display: block;
+}
+
+header > ul li.join a {
+  overflow: hidden;
+  background: url(images/layout_m.png) no-repeat -65px -35px /300px auto;
+  width: 17px;
+  height: 16px;
+  border: none;
+  color: transparent;
 }
 
 header > ul li a {

@@ -109,3 +109,39 @@ header > div .spot i {
 header .total {
   display: none;
 }
+
+/* 리워드 영역 */
+.rewards {
+  background: linear-gradient(
+    to right,
+    #272727,
+    #272727 50%,
+    #d6c798 50%,
+    #d6c798
+  );
+}
+.rewards > div {
+  width: 55rem;
+  margin: 0 auto;
+}
+
+.rewards h2 {
+  width: 20.3rem;
+  height: 10.8rem;
+  background: url(../images/reward_black.png) no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.rewards .info {
+  background: url(../images/reward_brown.png) no-repeat;
+}
+.rewards .info span {
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.rewards .info p {
+  font-size: 0.7rem;
+  color: #666;
+}

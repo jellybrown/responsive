@@ -115,33 +115,101 @@ header .total {
   background: linear-gradient(
     to right,
     #272727,
-    #272727 50%,
-    #d6c798 50%,
+    #272727 30%,
+    #d6c798 30%,
     #d6c798
   );
 }
 .rewards > div {
   width: 55rem;
   margin: 0 auto;
+  position: relative;
+}
+
+.rewards > div:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .rewards h2 {
-  width: 20.3rem;
-  height: 10.8rem;
-  background: url(../images/reward_black.png) no-repeat;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 16rem;
+  height: 13rem;
+  background: url(../images/reward_black.png) no-repeat right top/330px auto;
+
+  display: table;
+}
+
+.rewards h2 span {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .rewards .info {
-  background: url(../images/reward_brown.png) no-repeat;
+  padding: 2.4rem 0 0 17rem;
+
+  height: 13rem;
+  background: url(../images/reward_brown.png) no-repeat left bottom;
+  box-sizing: border-box;
 }
 .rewards .info span {
+  display: block;
   font-size: 1.15rem;
   color: #333;
+  line-height: 100%;
+  letter-spacing: -2px;
+  padding: 0 0 0.6rem;
 }
 
 .rewards .info p {
   font-size: 0.7rem;
   color: #666;
+
+  line-height: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.rewards .left {
+  float: left;
+}
+.rewards .right {
+  float: right;
+}
+
+.rewards .btm {
+  clear: both; /* 영역이 없기때문에 */
+  padding: 1.7rem 0 0;
+}
+
+.rewards .btm .btn {
+  width: 12.75rem;
+}
+
+.rewards .top_btn {
+  padding: 1.7rem 0 0;
+}
+
+.rewards .top_btn a:first-child {
+  margin-right: 5px;
+}
+
+/* 버튼 */
+.btn {
+  display: inline-block;
+  min-width: 6.25rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  font-size: 0.7rem;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 3px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn.type1 {
+  background: #222;
+  color: #fff;
 }

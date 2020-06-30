@@ -15,7 +15,17 @@ header > div h1 {
   padding: 1.1rem 0 1.2rem 1rem;
 }
 
+/* 비주얼 영역 */
+
+.visual > div div.img1 {
+  left: 1rem;
+}
+
 /* 리워드 영역 */
+
+.rewards > div {
+  width: 100%;
+}
 
 .rewards h2 {
   height: 16.8rem;

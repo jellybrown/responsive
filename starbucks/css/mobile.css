@@ -56,3 +56,35 @@ header > div .spot li span {
   position: absolute;
   left: -4000%;
 }
+
+/* 비주얼 영역 */
+.visual > div {
+  height: 40rem;
+}
+
+.visual > div div img {
+  width: 100%;
+}
+
+.visual > div div.img1 {
+  min-width: 10rem;
+  width: 26%;
+}
+
+.visual > div div.img2 {
+  min-width: 13rem;
+  width: 45%;
+  top: 16rem;
+  left: 18%;
+}
+.visual > div div.img3 {
+  min-width: 12rem;
+  width: 47%;
+  left: 30%;
+}
+.visual > div div.img4 {
+  min-width: 12rem;
+  width: 41%;
+  top: 12rem;
+  left: 58%;
+}

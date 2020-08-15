@@ -2,44 +2,59 @@ html {
   font-size: 20px;
   font-family: "Montserrat", "Noto Sans KR ", sans-serif;
 }
+
 body {
   font-size: 1rem;
+
 }
 
 header {
   background: #f6f5ef;
   border-top: 2px solid #000;
+  position: fixed;
+
+
+  width: 100%;
+  height: 137px;
+  z-index: 10;
+
+
+
 }
 
-header > div {
+header>div {
   width: 55rem;
+  height: 137px;
   margin: 0 auto;
   position: relative;
 }
-header > div:after {
+
+header>div:after {
   /*float로 인해 영역 사라져서 추가 */
   content: "";
   display: block;
   clear: both;
 }
 
-header > div h1 {
+header>div h1 {
   float: left;
   padding: 1.1rem 0 1.2rem;
 }
 
-header > div nav {
+header>div nav {
   float: right;
   padding: 3.4rem 0 0 0;
 }
-header > div nav > ul > li {
+
+header>div nav>ul>li {
   float: left;
 }
-header > div nav > ul > li:first-child {
+
+header>div nav>ul>li:first-child {
   display: none;
 }
 
-header > div nav > ul > li > a {
+header>div nav>ul>li>a {
   display: block;
   font-size: 0.7rem;
   padding: 0.75rem 1.25rem 0;
@@ -49,26 +64,110 @@ header > div nav > ul > li > a {
   font-weight: 500;
 }
 
-header > div .spot {
+/* 2nd 메뉴 */
+.first,
+.second,
+.third {
+  display: none;
+}
+
+nav>ul>li.menus>div {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.89);
+  padding-bottom: 40px;
+
+
+}
+
+nav>ul>li.menus>div>ul {
+
+  margin: 0 auto;
+  width: 80%;
+
+
+
+}
+
+nav>ul>li.menus>div>ul {
+  /* 한덩이마다 flex */
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+nav>ul>li.menus>div>ul>li {
+  display: inline-block;
+  vertical-align: top;
+  width: 190px;
+  /* 퍼센트로 주면 여백 늘어남 */
+  padding: 20px 10px;
+
+}
+
+
+nav>ul>li.menus>div>ul>li>a {
+  font-weight: bold;
+  font-size: 0.68rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #e9e8e8;
+
+
+
+}
+
+nav>ul>li.menus>div>ul>li>ul {
+
+  /* 덩이 내부 flex */
+  display: flex;
+  flex-direction: column;
+}
+
+nav>ul>li.menus.first>div>ul>li>ul {
+  height: 140px;
+}
+
+nav>ul>li.menus.second>div>ul>li>ul {
+  height: 200px;
+}
+
+nav>ul>li.menus>div>ul>li>ul li {}
+
+nav>ul>li.menus>div>ul>li>ul li>a {
+  line-height: 1;
+
+  font-size: 0.58rem;
+  color: #9c9c9c;
+  word-spacing: -1.4px;
+}
+
+
+
+
+header>div .spot {
   position: absolute;
   top: 1rem;
   right: 2.25rem;
   font-family: Noto Sans KR;
 }
 
-header > div .spot li {
+header>div .spot li {
   float: left;
   position: relative;
 }
 
-header > div .spot li a {
+header>div .spot li a {
   font-size: 0.65rem;
   padding: 0.75rem;
   color: #333;
   line-height: 100%;
 }
 
-header > div .spot li ~ li a:after {
+header>div .spot li~li a:after {
   content: "";
   position: absolute;
   left: 0;
@@ -79,10 +178,11 @@ header > div .spot li ~ li a:after {
   background: #e5e5e5;
 }
 
-header > div .spot li:last-child a:after {
+header>div .spot li:last-child a:after {
   display: none;
 }
-header > div .spot li:last-child a {
+
+header>div .spot li:last-child a {
   display: block;
   width: 1.7rem;
   height: 1.7rem;
@@ -95,14 +195,14 @@ header > div .spot li:last-child a {
   border-radius: 0.25px;
 }
 
-header > div .spot li:last-child a:before {
+header>div .spot li:last-child a:before {
   content: "\e97a";
   font-family: "xeicon";
   font-size: 1.2rem;
   color: #000;
 }
 
-header > div .spot i {
+header>div .spot i {
   display: none;
 }
 
@@ -111,10 +211,20 @@ header .total {
 }
 
 /* 비주얼 영역 */
-.visual {
-  background: url(../images/20_summer2_bev_bg.jpg) no-repeat center top;
+.wrapper {
+  width: 100%;
 }
-.visual > div {
+
+.visual {
+  padding-top: 137px;
+  background: url(../images/20_summer2_bev_bg.jpg) no-repeat center bottom;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.visual>div {
   position: relative;
   width: 100%;
   max-width: 55rem;
@@ -122,18 +232,20 @@ header .total {
   margin: 0 auto;
 }
 
-.visual > div div {
+.visual>div div {
   position: absolute;
 }
-.visual > div div.img1 {
+
+.visual>div div.img1 {
   left: 0;
   top: 3.85rem;
 }
 
-.visual > div div.img1 img {
+.visual>div div.img1 img {
   display: block;
 }
-.visual > div div.img1 a {
+
+.visual>div div.img1 a {
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 3px;
@@ -145,36 +257,37 @@ header .total {
   margin: 2.15rem 0 0;
 }
 
-.visual > div div.img2 {
+.visual>div div.img2 {
   left: 25%;
   top: 10rem;
 }
-.visual > div div.img3 {
+
+.visual>div div.img3 {
   left: 40%;
   top: 3.3rem;
 }
-.visual > div div.img4 {
+
+.visual>div div.img4 {
   left: 65%;
   top: 7.1rem;
 }
 
 /* 리워드 영역 */
 .rewards {
-  background: linear-gradient(
-    to right,
-    #272727,
-    #272727 30%,
-    #d6c798 30%,
-    #d6c798
-  );
+  background: linear-gradient(to right,
+      #272727,
+      #272727 30%,
+      #d6c798 30%,
+      #d6c798);
 }
-.rewards > div {
+
+.rewards>div {
   width: 55rem;
   margin: 0 auto;
   position: relative;
 }
 
-.rewards > div:after {
+.rewards>div:after {
   content: "";
   display: block;
   clear: both;
@@ -202,6 +315,7 @@ header .total {
   background: url(../images/reward_brown.png) no-repeat left bottom;
   box-sizing: border-box;
 }
+
 .rewards .info span {
   display: block;
   font-size: 1.15rem;
@@ -222,12 +336,14 @@ header .total {
 .rewards .left {
   float: left;
 }
+
 .rewards .right {
   float: right;
 }
 
 .rewards .btm {
-  clear: both; /* 영역이 없기때문에 */
+  clear: both;
+  /* 영역이 없기때문에 */
   padding: 1.7rem 0 0;
 }
 

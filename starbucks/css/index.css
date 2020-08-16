@@ -6,18 +6,20 @@ html {
 body {
   font-size: 1rem;
 
+
 }
 
 header {
   background: #f6f5ef;
   border-top: 2px solid #000;
   position: fixed;
+  overflow: hidden;
 
 
   width: 100%;
   height: 137px;
   z-index: 10;
-
+  box-sizing: border-box;
 
 
 }
@@ -27,6 +29,7 @@ header>div {
   height: 137px;
   margin: 0 auto;
   position: relative;
+
 }
 
 header>div:after {
@@ -34,6 +37,7 @@ header>div:after {
   content: "";
   display: block;
   clear: both;
+
 }
 
 header>div h1 {
@@ -44,10 +48,17 @@ header>div h1 {
 header>div nav {
   float: right;
   padding: 3.4rem 0 0 0;
+
+
+
 }
 
 header>div nav>ul>li {
   float: left;
+
+
+
+
 }
 
 header>div nav>ul>li:first-child {
@@ -64,22 +75,50 @@ header>div nav>ul>li>a {
   font-weight: 500;
 }
 
-/* 2nd 메뉴 */
-.first,
-.second,
-.third {
-  display: none;
+
+header>div nav>ul>li.active>a {
+  background-color: #2c2a29;
+  color: #5f8c05;
+
+
+
 }
+
+header>div nav>ul>li.active>a:hover {
+  text-decoration: underline;
+
+}
+
+
+
+/* 2nd 메뉴 */
+.sixx>a:first-child {
+  display: none;
+  /* 블럭 자동생성돼서 없앰 */
+}
+
+.first,
+
+.third,
+.fourth,
+.fifth,
+.sixx {}
+
+
+
 
 nav>ul>li.menus>div {
   position: fixed;
   left: 0;
   width: 100%;
-  background-color: rgba(20, 20, 20, 0.89);
+  background-color: rgba(32, 32, 32, 0.959);
   padding-bottom: 40px;
+  display: none;
 
 
 }
+
+
 
 nav>ul>li.menus>div>ul {
 
@@ -92,17 +131,18 @@ nav>ul>li.menus>div>ul {
 
 nav>ul>li.menus>div>ul {
   /* 한덩이마다 flex */
-  display: flex;
+
 
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: baseline;
+
 }
 
 nav>ul>li.menus>div>ul>li {
   display: inline-block;
   vertical-align: top;
-  width: 190px;
+  width: 210px;
   /* 퍼센트로 주면 여백 늘어남 */
   padding: 20px 10px;
 
@@ -115,9 +155,10 @@ nav>ul>li.menus>div>ul>li>a {
   display: block;
   margin-bottom: 10px;
   color: #e9e8e8;
+}
 
-
-
+nav>ul>li.menus>div>ul>li>a:hover {
+  text-decoration: underline;
 }
 
 nav>ul>li.menus>div>ul>li>ul {
@@ -145,6 +186,9 @@ nav>ul>li.menus>div>ul>li>ul li>a {
   word-spacing: -1.4px;
 }
 
+nav>ul>li.menus>div>ul>li>ul li>a:hover {
+  text-decoration: underline;
+}
 
 
 
